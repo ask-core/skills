@@ -7,10 +7,10 @@
     "archive": "continuum-runtime-0.1.0.cjs.gz",
     "compression": "gzip",
     "entry": "continuum-runtime.cjs",
-    "sha256": "c7e0b504946a65847158f85b7b5465100af7ac04562681a9db912007e4b3291a",
-    "contentSha256": "6ced5d69e0ce114a10a81893e0afa0b2f2e52a2823af56bd4d0ad1378e913ebe",
-    "size": 1572028,
-    "contentSize": 4527145
+    "sha256": "7b2a100458995fbe423ea0113f7bd7ed6398bb82c26c65ecfda0391b6bf5131e",
+    "contentSha256": "78b5ecbe3f0fc528c79099546007ea88c216e9f6b74a03efc628827dcd51bc90",
+    "size": 1537017,
+    "contentSize": 4426267
   },
   "compatibility": {
     "node": ">=22.13.0",
