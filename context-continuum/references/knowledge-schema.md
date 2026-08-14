@@ -1,9 +1,9 @@
-# Memory schema
+# Knowledge record schema
 
 ## Create input
 
 ```ts
-interface CreateMemoryInput {
+interface CreateKnowledgeInput {
   key: string;
   type: "fact" | "rule" | "procedure" | "pitfall" | "decision";
   title: string;
@@ -29,7 +29,7 @@ interface CreateMemoryInput {
 
 ## System fields
 
-Never send `schema`, `id`, `status`, `revision`, `supersededBy`, `createdAt`, or `updatedAt` in create or patch data. The CLI owns them.
+Never send `schema`, `id`, `status`, `revision`, `supersededBy`, `createdAt`, or `updatedAt` in create or patch data. The runtime owns them.
 
 ## Update patch
 

@@ -1,16 +1,16 @@
 {
   "schema": 2,
-  "product": "project-memory-cli",
+  "product": "context-continuum",
   "version": "0.1.0",
   "protocol": 1,
   "runtime": {
-    "archive": "memory-cli-0.1.0.cjs.gz",
+    "archive": "continuum-runtime-0.1.0.cjs.gz",
     "compression": "gzip",
-    "entry": "memory-cli.cjs",
-    "sha256": "9666d13b3616e76bfcd595298faff26bfc11e6a348d9a9dc50dc8bcc0922eb68",
-    "contentSha256": "a8a451fe8ca062a58dff7a73350abf90686e3331c9bd88625c8280e3f0e803c1",
-    "size": 1576968,
-    "contentSize": 4537635
+    "entry": "continuum-runtime.cjs",
+    "sha256": "c7e0b504946a65847158f85b7b5465100af7ac04562681a9db912007e4b3291a",
+    "contentSha256": "6ced5d69e0ce114a10a81893e0afa0b2f2e52a2823af56bd4d0ad1378e913ebe",
+    "size": 1572028,
+    "contentSize": 4527145
   },
   "compatibility": {
     "node": ">=22.13.0",

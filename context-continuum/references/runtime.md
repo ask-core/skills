@@ -1,6 +1,6 @@
-# CLI reference
+# Runtime reference
 
-Invoke commands as `node "<skill-directory>/scripts/memory.mjs" <command> ... --json`. JSON mode emits one envelope and no explanatory text.
+Invoke commands as `node "<skill-directory>/scripts/continuum.mjs" <command> ... --json`. JSON mode emits one envelope and no explanatory text.
 
 ## Commands
 
@@ -8,9 +8,9 @@ Invoke commands as `node "<skill-directory>/scripts/memory.mjs" <command> ... --
 | --- | --- | --- |
 | `info` | Report product, version, and protocol | — |
 | `init [directory]` | Initialize `.memory/` | `.` |
-| `recall <task>` | Return relevant active memories with content | 5 results, 12000 chars |
+| `recall <task>` | Return relevant active knowledge with content | 5 results, 12000 chars |
 | `search <query>` | Return ranked active summaries | 8 results |
-| `get <id>` | Return one complete memory | — |
+| `get <id>` | Return one complete knowledge record | — |
 | `refine --stdin` | Apply one change set | stdin ≤ 1 MiB |
 | `list` | List summaries | all statuses |
 | `history` | Return newest refinement records | 50 records |
@@ -35,13 +35,13 @@ Options:
 
 ## Recovery
 
-- `MEMORY_NOT_INITIALIZED`: Continue without memory unless the user requested setup.
+- `MEMORY_NOT_INITIALIZED`: Continue without stored project knowledge unless the user requested setup.
 - `MEMORY_NOT_FOUND`: Search again or discard the stale ID.
-- `REVISION_CONFLICT`: Get the latest memory and rebuild the change.
+- `REVISION_CONFLICT`: Get the latest record and rebuild the change.
 - `DUPLICATE_KEY`: Search the existing key and choose the correct operation.
 - `SCHEMA_INVALID` / `INVALID_CHANGESET`: Correct the input; do not weaken it.
 - `INDEX_ERROR`: Run `reindex`, then retry the read.
-- `REFINE_IN_PROGRESS`: Wait, reread affected memories, then reconsider the change.
+- `REFINE_IN_PROGRESS`: Wait, reread affected records, then reconsider the change.
 - `BOOTSTRAP_NODE_UNSUPPORTED`: Require Node.js 22.13+.
 - `BOOTSTRAP_PLATFORM_UNSUPPORTED` / `BOOTSTRAP_ARCH_UNSUPPORTED`: Require macOS, Windows, or Linux on x64 or arm64.
 - `BOOTSTRAP_ASSET_MISSING` / `BOOTSTRAP_ASSET_INVALID`: Reinstall the Skill.

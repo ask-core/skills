@@ -10,10 +10,10 @@ Search each candidate, then choose one operation:
 
 | Condition | Operation |
 | --- | --- |
-| No equivalent memory exists | `create` |
+| No equivalent knowledge record exists | `create` |
 | The same knowledge gains useful detail | `update` |
 | New knowledge replaces old knowledge | `supersede` |
-| Knowledge is obsolete without a replacement | `deprecate` |
+| A knowledge record is obsolete without a replacement | `deprecate` |
 
 ## Build the change set
 
@@ -21,7 +21,7 @@ Search each candidate, then choose one operation:
 interface RefineChangeSet { schema: 1; reason: string; changes: Change[]; }
 ```
 
-Unknown fields are rejected. Target an existing memory at most once per change set.
+Unknown fields are rejected. Target an existing knowledge record at most once per change set.
 
 ### Create
 
@@ -59,7 +59,7 @@ Unknown fields are rejected. Target an existing memory at most once per change s
 
 ### Supersede
 
-Use a distinct key for the replacement. The old memory remains with `status: superseded`.
+Use a distinct key for the replacement. The old record remains with `status: superseded`.
 
 ```json
 {
@@ -87,13 +87,13 @@ Use a distinct key for the replacement. The old memory remains with `status: sup
 POSIX:
 
 ```bash
-printf '%s' '<change-set-json>' | node "<skill-directory>/scripts/memory.mjs" refine --stdin --json
+printf '%s' '<change-set-json>' | node "<skill-directory>/scripts/continuum.mjs" refine --stdin --json
 ```
 
 PowerShell:
 
 ```powershell
-$changeSetJson | node "<skill-directory>/scripts/memory.mjs" refine --stdin --json
+$changeSetJson | node "<skill-directory>/scripts/continuum.mjs" refine --stdin --json
 ```
 
-The CLI prechecks all changes and rolls back the whole refinement on failure. On `REVISION_CONFLICT`, fetch the latest memory, reconsider the operation, and build a new change set.
+The runtime prechecks all changes and rolls back the whole refinement on failure. On `REVISION_CONFLICT`, fetch the latest record, reconsider the operation, and build a new change set.
