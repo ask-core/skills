@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Memory"
+  short_description: "Recall and refine project-local knowledge"
+  default_prompt: "Use $project-memory to recall relevant project knowledge before starting this task."

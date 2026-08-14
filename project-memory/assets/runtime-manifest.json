@@ -1,0 +1,33 @@
+{
+  "schema": 2,
+  "product": "project-memory-cli",
+  "version": "0.1.0",
+  "protocol": 1,
+  "runtime": {
+    "archive": "memory-cli-0.1.0.cjs.gz",
+    "compression": "gzip",
+    "entry": "memory-cli.cjs",
+    "sha256": "9666d13b3616e76bfcd595298faff26bfc11e6a348d9a9dc50dc8bcc0922eb68",
+    "contentSha256": "a8a451fe8ca062a58dff7a73350abf90686e3331c9bd88625c8280e3f0e803c1",
+    "size": 1576968,
+    "contentSize": 4537635
+  },
+  "compatibility": {
+    "node": ">=22.13.0",
+    "targets": [
+      "darwin-arm64",
+      "darwin-x64",
+      "linux-arm64",
+      "linux-x64",
+      "win32-arm64",
+      "win32-x64"
+    ]
+  },
+  "build": {
+    "bundled": true,
+    "minified": true,
+    "obfuscated": true,
+    "sourceMaps": false,
+    "runtimeDependencies": 0
+  }
+}
